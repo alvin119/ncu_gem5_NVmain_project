@@ -1,4 +1,19 @@
 # computer organization final project : gem5 + NVmain
+## 修改的檔案
+### Q2 enable L3 cache
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/configs/common/Caches.py`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/configs/common/CacheConfig.py`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/configs/common/Options.py`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/src/cpu/BaseCPU.py`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/src/mem/XBar.py`
+### Q3 2 way and full way associativity
+修改編譯指令
+### Q4
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/configs/common/Caches.py`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/src/mem/cache/replacement_policies/lfu_rp.cc`
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/src/mem/cache/replacement_policies/lfu_rp.hh`
+### Q5 write back and write through policy
+- `gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e/src/mem/cache/base.cc`
 ## 要求
 - [ ] (Q1) GEM5 + NVMAIN BUILD-UP (40%)
 
