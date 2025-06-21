@@ -96,6 +96,19 @@
     - full way(16384):
 
         system.l3.overall_miss_rate::total: 0.470628
+3. array size = 2 * 10**5(二十萬)
+    - 2-way:
+
+        system.l3.overall_miss_rate::total: 0.182883
+
+    - full way(16384):
+
+        system.l3.overall_miss_rate::total: 0.182827
+
+Q : 為何full way miss rate比2 way的還高?
+
+A : gem5 cache預設使用LRU replacement policy，在arr-size為五十萬跟一百萬時大小分別為2MB、4MB，遠大於給定的cache size(l3 cache size = 1MB)，這會造成大量的conflict misses，此特殊情況可能導致2 way associativity比full way的miss rate還要低。
+
 ### Q4 frequency based replacement policy
 - l3_assoc=2
 1. array size = 1000000(一百萬)
